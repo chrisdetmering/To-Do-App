@@ -1,20 +1,29 @@
-body{
+body {
   background-color: lightskyblue;
   text-align: center;
   font-size: 25px;
 }
 
-h2{
+h2 {
   color: white;
-  font-family: inherit
+  font-family: inherit;
 }
 
-p{
+ul {
+  text-align: center;
+}
+
+p {
   color: white;
   font-style: oblique;
 }
 
-input#submit-button{
+.todo-input {
+  border-radius: 36px;
+  border: 10px solid white;
+}
+
+#submit-button {
   background-color: coral;
   color: black;
   font-style:inherit;
@@ -23,9 +32,4 @@ input#submit-button{
   border-radius: 36px;
 }
 
-input.enter-task{
-  border-radius: 36px;
-  border: 10px solid white;
-}
 
-ul{text-align: center;}
