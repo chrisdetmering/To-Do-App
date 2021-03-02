@@ -1,20 +1,25 @@
-const todoInput = document.getElementById('task');
-const list = document.getElementById('list');
-const submitButton = document.getElementById('submit-button');
+document.querySelector('.todo-form')
+.addEventListener('submit', event => {
+  event.preventDefault(); 
 
-submitButton.addEventListener('click', () => {
-  console.log('todoInput value: ', todoInput.value)
-  var tasks = document.createElement('p')
-  tasks.innerText = todoInput.value
-  list.appendChild(tasks)
-  todoInput.value = ""
-  tasks.addEventListener('click', () => {
-    tasks.style.textDecoration = "line-through"
-  })
-  tasks.addEventListener('dblclick', () => {
-    list.removeChild(tasks)
-     })
+  const todoInput = document.querySelector('.enter-todo'); 
+  const text = todoInput.value; 
+  const todo = createTodo(text); 
+
+  document.querySelector('.todo-list').appendChild(todo); 
+  todoInput.value = ""; 
 });
 
+function createTodo(text) { 
+  const todoParagraph = document.createElement('p');
+  todoParagraph.textContent = text; 
 
+  todoParagraph.addEventListener('click', () => {
+    todoParagraph.style.textDecoration = "line-through"
+  });
+  todoParagraph.addEventListener('dblclick', () => {
+    todoParagraph.remove(todoParagraph);
+  });
+ return todoParagraph; 
+}
 

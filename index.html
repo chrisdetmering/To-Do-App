@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>To-Do</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>To-Do List</h2> 
 
- <h2>To-Do List</h2> 
+    <p>What would you like to accomplish?</p>
 
-<p>What would you like to accomplish?</p>
+    <form class="todo-form">
+      <input class="enter-todo" type="text" placeholder="enter task..">
+      <input id="submit-button" type="submit" value="Submit">
+    </form>
 
-
-<form>
-  <label for="task"></label>
-  <input class= "enter-task" type="text" id="task" name="task" placeholder="enter task..">
-
-  <ul class="todo" id=list></ul>
-
-<input id= "submit-button" type="button" value="Submit" onclick="return submit">
-</form>
-
-<p>Click once to check off. Double click to delete task</p>
-
-<script src="script.js"></script>
-
-</body>
+    <p>Click once to check off. Double click to delete task</p>
+    <ul class="todo-list"></ul>
+    <script src="script.js"></script>
+  </body>
 </html>
